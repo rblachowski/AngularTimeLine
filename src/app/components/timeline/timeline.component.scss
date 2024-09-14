@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.timeline {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  min-height: 200px;
+  overflow-x: scroll;
+}
+
+.timeline-item {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 280px;
+}
+
+.timeline-item h3 {
+  margin: 0;
+}
+
+.timeline-item p {
+  margin: 5px 0;
+}

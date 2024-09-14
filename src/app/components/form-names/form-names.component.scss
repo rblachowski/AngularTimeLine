@@ -1,0 +1,24 @@
+.flex { 
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  .separator {
+    width: 1px;
+    background: black;
+  }
+
+  .form {
+    padding: 20px;
+    width: 40%;
+  }
+
+  .paragraph {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.hidden {
+  display: none;
+}

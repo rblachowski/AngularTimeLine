@@ -1,0 +1,31 @@
+<h1>Formularz Osobowy</h1>
+
+<div class="flex">
+
+  <div class="form">
+    <app-new-form [title]="'Dodaj osobę'" [buttonText]="'Zapisz'" [isEditable]="true" [formData]="formData" (formSubmit)="saveData($event)"></app-new-form>
+  </div>
+
+  <div class="separator"></div>
+  <div class="form">
+    <app-new-form [title]="'Edytuj osobę'" [buttonText]="'Znajdź'" [isEditable]="false" [formData]="editeData" (formSubmit)="editData($event)"></app-new-form>
+  
+    <div *ngFor="let person of matchingResults">
+      <app-result [data]="person" (openModal)="updateData($event)"></app-result>
+    </div>
+  </div>
+</div>
+
+<h2>Wyszukiwanie Imienia</h2>
+<input type="text" id="searchName" placeholder="Wpisz imię" (input)="searchNames($event)">
+<ul>
+  <li *ngFor="let name of nameList" (click)="selectName(name)">{{ name }}</li>
+</ul>
+<button (click)="findData()">findButton</button>
+
+
+<div *ngIf="isModalOpen" >
+  <app-modal [isEdit]="true" [data]="formData" (updateData)="changeData($event)" (closeModal)="closeModal()"></app-modal>
+</div>
+
+

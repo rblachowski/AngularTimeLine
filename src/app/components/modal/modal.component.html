@@ -1,0 +1,7 @@
+<div class="modal">
+  <div class="container">
+    <div class="icon-close" (click)="closeModal.emit()">X</div>
+    <app-new-form class="form" [formData]="data" [isEditable]="true" buttonText="zapisz zmiany" title="Edycja osoby"
+      [isEdit]="true" (formSubmit)="changeData($event)"></app-new-form>
+  </div>
+</div>

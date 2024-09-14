@@ -1,0 +1,15 @@
+<ul *ngIf="timelineData; else loading" id="timeline" class="timeline">
+  <li *ngFor="let person of timelineData" class="timeline-item">
+    <h3>{{ person.name }} <span v-if="person?.age">{{ person.age.length ? '(' + person.age + ')' : '' }}</span></h3>
+    <p><strong>Ojciec:</strong> {{ person.father }}</p>
+    <p><strong>Dziadek:</strong> {{ person.grandFather }}</p>
+    <p><strong>Synowie:</strong> {{ person.sons.length ? person.sons.join(', ') : 'Brak' }}</p>
+    <p><strong>Wnuki:</strong> {{ person.grandsons.length ? person.grandsons.join(', ') : 'Brak' }}</p>
+    <app-item></app-item>
+  </li>
+</ul>
+<button class="button">show</button>
+
+<ng-template #loading>
+  <p>Ładowanie danych...</p>
+</ng-template>

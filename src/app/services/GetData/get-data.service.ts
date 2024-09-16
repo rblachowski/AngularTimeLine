@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class GetDataService {
 
   
-  private apiUrl = 'https://secret-reef-76012-2bfd4a8b4b21.herokuapp.com/'; // Podstawowy URL API
+  private apiUrl = 'https://secret-reef-76012-2bfd4a8b4b21.herokuapp.com'; // Podstawowy URL API
 
   constructor(private http: HttpClient) {}
 

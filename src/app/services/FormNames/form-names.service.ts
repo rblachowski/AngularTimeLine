@@ -7,7 +7,7 @@ import { switchMap, map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class FormNamesService {
-  private apiUrl = 'https://secret-reef-76012-2bfd4a8b4b21.herokuapp.com/'; // URL API
+  private apiUrl = 'https://secret-reef-76012-2bfd4a8b4b21.herokuapp.com'; // URL API
 
   constructor(private http: HttpClient) {}
 
